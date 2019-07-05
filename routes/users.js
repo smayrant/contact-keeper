@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcryptjs");
+const jwt = require("jsonwebtoken");
+const config = require("config");
 const { check, validationResult } = require("express-validator");
 
 const User = require("../models/User");
@@ -24,6 +26,7 @@ router.post(
 		try {
 			// find user by email using MongoDB's findOne method and store in user variable
 			let user = await User.findOne({ email });
+
 			if (user) {
 				return res.status(400).json({ msg: "User already exists" });
 			}
@@ -39,7 +42,24 @@ router.post(
 			// hash the password
 			user.password = await bcrypt.hash(password, salt);
 
-			res.send("user saved");
+			// object to send in token
+			const payload = {
+				user: {
+					id: user.id
+				}
+			};
+
+			jwt.sign(
+				payload,
+				config.get("jwtSecret"),
+				{
+					expiresIn: 36000
+				},
+				(err, token) => {
+					if (err) throw err;
+					res.json({ token });
+				}
+			);
 
 			// save to DB
 			await user.save();
