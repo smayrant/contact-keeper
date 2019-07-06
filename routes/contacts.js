@@ -20,8 +20,33 @@ router.get("/", auth, async (req, res) => {
 });
 
 // add new contact
-router.post("/", (req, res) => {
-	res.send("Add contact");
+router.post("/", [ auth, [ check("name", "Name is required").not().isEmpty() ] ], async (req, res) => {
+	// retrieve validation errors
+	const errors = validationResult(req);
+	// if errors isn't empty, send a 400 status and the array of errors
+	if (!errors.isEmpty()) {
+		return res.status(400).json({ errors: errors.array() });
+	}
+
+	const { name, email, phone, type } = req.body;
+
+	try {
+		// create new contact instance
+		const newcontact = new Contact({
+			name,
+			email,
+			phone,
+			type,
+			user: req.user.id
+		});
+		// save contact to DB
+		const contact = await newcontact.save();
+		// return the contact
+		res.json(contact);
+	} catch (error) {
+		console.error(error.message);
+		res.status(500).send("Server Error");
+	}
 });
 
 // delete contact
