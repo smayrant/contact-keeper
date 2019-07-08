@@ -11,6 +11,12 @@ import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
 import Alerts from "./components/layout/Alerts";
 import AlertState from "./context/alert/AlertState";
+import setAuthToken from "./utils/setAuthToken";
+
+// stores the token in the header if a token is present
+if (localStorage.token) {
+	setAuthToken(localStorage.token);
+}
 
 const App = () => {
 	return (

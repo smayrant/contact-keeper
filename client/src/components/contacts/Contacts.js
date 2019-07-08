@@ -10,7 +10,7 @@ const Contacts = () => {
 	if (contacts.length === 0) {
 		return <h4>Please add a contact</h4>;
 	}
-	console.log(filtered);
+
 	return (
 		<Fragment>
 			<TransitionGroup>
