@@ -38,13 +38,13 @@ router.post(
 			let user = await User.findOne({ email });
 			// if there is no user with the found email, return a 400 status
 			if (!user) {
-				return res.status(400).json({ msg: "Invalid email" });
+				return res.status(400).json({ msg: "Invalid Credentials" });
 			}
 			// use bcrypt's compare method to compare the typed in password from the user and the saved, hashed password
 			const isMatch = await bcrypt.compare(password, user.password);
 
 			if (!isMatch) {
-				return res.status(400).json({ msg: "Invalid password" });
+				return res.status(400).json({ msg: "Invalid Credentials" });
 			}
 
 			// object to send in token

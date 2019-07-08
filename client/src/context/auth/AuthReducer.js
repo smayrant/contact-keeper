@@ -11,6 +11,7 @@ import {
 
 export default (state, action) => {
 	switch (action.type) {
+		case LOGIN_SUCCESS:
 		case REGISTER_SUCCESS:
 			// store the token in local storage
 			localStorage.setItem("token", action.payload.token);
@@ -23,6 +24,7 @@ export default (state, action) => {
 			};
 		case REGISTER_FAIL:
 		case AUTH_ERROR:
+		case LOGIN_FAIL:
 			localStorage.removeItem("token");
 			return {
 				...state,
