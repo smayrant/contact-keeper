@@ -12,7 +12,7 @@ const Login = props => {
 	useEffect(
 		() => {
 			if (isAuthenticated) {
-				props.history.push("/");
+				props.history.push("/home");
 			}
 			if (error === "Invalid Credentials") {
 				setAlert(error, "danger");
@@ -44,7 +44,6 @@ const Login = props => {
 				password
 			});
 		}
-		console.log("login submit");
 	};
 
 	return (

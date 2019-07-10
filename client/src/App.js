@@ -2,6 +2,8 @@ import React, { Fragment } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./components/pages/Home";
 import About from "./components/pages/About";
+import Welcome from "./components/pages/Welcome";
+import Error from "./components/pages/Error";
 import Navbar from "./components/layout/Navbar";
 
 import ContactState from "./context/contact/ContactState";
@@ -26,16 +28,17 @@ const App = () => {
 				<AlertState>
 					<Router>
 						<Fragment>
-							<Navbar />
-							<div className="container">
-								<Alerts />
-								<Switch>
-									<PrivateRoute exact path="/" component={Home} />
+							<Alerts />
+							<Switch>
+								<Route exact path="/" component={Welcome} />
+								<div className="container">
+									<PrivateRoute exact path="/home" component={Home} />
 									<Route exact path="/about" component={About} />
 									<Route exact path="/register" component={Register} />
 									<Route exact path="/login" component={Login} />
-								</Switch>
-							</div>
+									<Route component={Error} />
+								</div>
+							</Switch>
 						</Fragment>
 					</Router>
 				</AlertState>
