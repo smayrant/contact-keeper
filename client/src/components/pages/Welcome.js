@@ -32,7 +32,7 @@ const Welcome = () => {
 						<h1>The Contact Manager For You</h1>
 						<h3>Stop searching for the best contact manager, you just found it!</h3>
 						<Link to="/register">
-							<button className="title-block-button">Sign Me Up!</button>
+							<button className="button">Sign Me Up!</button>
 						</Link>
 					</div>
 				</div>

@@ -56,7 +56,7 @@ const Register = props => {
 	return (
 		<div className="form-container main-content">
 			<h3>ContactKeeper</h3>
-			<h1>Get Started for Free</h1>
+			<h1>Get Started for Free!</h1>
 			<p>No commitment. No credit card required.</p>
 			<form onSubmit={onSubmit}>
 				<div className="form-group">
@@ -75,7 +75,7 @@ const Register = props => {
 					<input type="password" name="password2" value={password2} onChange={onChange} />
 					<label htmlFor="password2">Confirm Password</label>
 				</div>
-				<input type="submit" value="Register" className="btn btn-primary btn-block" />
+				<input className="button register-button" type="submit" value="Register" />
 			</form>
 		</div>
 	);
