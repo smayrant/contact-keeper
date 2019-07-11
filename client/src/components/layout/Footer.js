@@ -1,5 +1,4 @@
 import React from "react";
-import footerBg from "../../img/footer-background.jpg";
 
 const Footer = () => {
 	return (

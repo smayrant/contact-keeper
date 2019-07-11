@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 import community from "../../img/social-care.svg";
 import family from "../../img/family.svg";
+import computer from "../../img/computer.svg";
 
 const Welcome = () => {
 	return (
@@ -54,6 +55,17 @@ const Welcome = () => {
 						repellat, numquam ut sed tempore magni natus totam a laboriosam ex tenetur officia est maiores
 						voluptates.
 					</p>
+				</div>
+			</div>
+			<div className="summary-container">
+				<div className="container">
+					<h1 className="headline">contacts at your fingertips</h1>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim asperiores dolor vel voluptas
+						quisquam eaque deleniti. Nemo quo necessitatibus sit non? Suscipit ipsa, cumque similique natus
+						dicta accusantium inventore. Adipisci!
+					</p>
+					<img src={computer} alt="" />
 				</div>
 			</div>
 		</div>
