@@ -1,0 +1,23 @@
+.main-body {
+	background: #4b56ab;
+}
+
+.error-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	min-height: 100vh;
+	color: #dadada;
+
+	h1 {
+		margin-top: 5rem;
+	}
+
+	.home-link {
+		font-size: 2rem;
+		color: #d66363;
+		text-decoration: none;
+	}
+}

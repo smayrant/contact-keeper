@@ -74,3 +74,29 @@ li {
 	-webkit-transform: scale(1);
 	transform: scale(1);
 }
+
+.headline {
+	text-transform: capitalize;
+	text-align: center;
+	margin-top: 3rem;
+	font-weight: 700;
+}
+
+.img-text-container {
+	margin: 2.5rem auto auto 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	p {
+		max-width: 50%;
+		margin: auto;
+		line-height: 2rem;
+	}
+
+	img {
+		width: 15rem;
+		height: auto;
+		margin-top: 3rem;
+	}
+}

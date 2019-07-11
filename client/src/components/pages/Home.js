@@ -12,7 +12,7 @@ const Home = () => {
 		// eslint-disable-next-line
 	}, []);
 	return (
-		<div className="grid-2">
+		<div className="grid-2 main-content">
 			<div>
 				<ContactForm />
 			</div>

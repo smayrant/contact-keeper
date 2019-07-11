@@ -1,11 +1,11 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./components/pages/Home";
 import About from "./components/pages/About";
 import Welcome from "./components/pages/Welcome";
 import Error from "./components/pages/Error";
 import Navbar from "./components/layout/Navbar";
-
+import Footer from "./components/layout/Footer";
 import ContactState from "./context/contact/ContactState";
 import AuthState from "./context/auth/AuthState";
 import "./main.scss";
@@ -27,7 +27,7 @@ const App = () => {
 			<ContactState>
 				<AlertState>
 					<Router>
-						<Fragment>
+						<div className="route-container">
 							<Alerts />
 							<Switch>
 								<Route exact path="/" component={Welcome} />
@@ -37,7 +37,8 @@ const App = () => {
 								<Route exact path="/login" component={Login} />
 								<Route component={Error} />
 							</Switch>
-						</Fragment>
+							<Footer />
+						</div>
 					</Router>
 				</AlertState>
 			</ContactState>
