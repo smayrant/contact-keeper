@@ -42,10 +42,10 @@ const ContactItem = ({ contact }) => {
 				)}
 			</ul>
 			<p>
-				<button className="btn btn-dark btn-sm" onClick={() => setCurrent(contact)}>
+				<button className="home-button edit-button" onClick={() => setCurrent(contact)}>
 					Edit
 				</button>
-				<button className="btn btn-danger btn-sm" onClick={onDelete}>
+				<button className="home-button delete-button" onClick={onDelete}>
 					Delete
 				</button>
 			</p>

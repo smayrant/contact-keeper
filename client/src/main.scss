@@ -4,9 +4,11 @@
 @import './styles/layout/footer.scss';
 @import './styles/layout/submitButton.scss';
 @import './styles/layout/alert.scss';
+@import './styles/layout/contactForm.scss';
 @import './styles/pages/login.scss';
 @import './styles/pages/error.scss';
 @import './styles/pages/register.scss';
+@import './styles/pages/home.scss';
 
 .route-container {
 	display: flex;
