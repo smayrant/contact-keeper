@@ -75,7 +75,7 @@ const Register = props => {
 					<input type="password" name="password2" value={password2} onChange={onChange} />
 					<label htmlFor="password2">Confirm Password</label>
 				</div>
-				<input className="button register-button" type="submit" value="Register" />
+				<input className="submit-button" type="submit" value="Register" />
 			</form>
 		</div>
 	);
