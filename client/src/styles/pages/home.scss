@@ -22,17 +22,13 @@
 	text-shadow: 0px 1px 0px #5854cc;
 	transition: all .3s ease-in-out;
 }
-.home-button:hover {
-	background-color: darken(#03ab0e, 8);
-	text-shadow: 9px 5px 4px #5854cc;
-}
+
 .home-button:active {
 	position: relative;
 	top: 1px;
 }
 
-.add-contact-button,
-.clear-button {
+.add-contact-button {
 	margin-top: 1.5rem;
 }
 
@@ -41,19 +37,6 @@
 	background-color: darken(#e31c0d, 4);
 	border: 1px solid #8a2a21;
 	text-shadow: 0px 1px 0px #e31c0d;
-}
-
-.clear-button:hover {
-	background-color: darken(#e31c0d, 4);
-	text-shadow: 9px 5px 4px #333;
-}
-.clear-button:hover {
-	background-color: darken(#e31c0d, 4);
-	text-shadow: 9px 5px 4px #333;
-}
-.clear-button:hover {
-	background-color: darken(#e31c0d, 4);
-	text-shadow: 9px 5px 4px #333;
 }
 
 .edit-button {

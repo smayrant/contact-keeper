@@ -14,10 +14,12 @@ const ContactItem = ({ contact }) => {
 
 	return (
 		<div className="card bg-light">
-			<span className={"badge " + (type === "professional" ? "badge-orange" : "badge-blue")}>
-				{type.charAt(0).toUpperCase() + type.slice(1)}
-			</span>
-			<h3 className="text-primary text-left">{name}  </h3>
+			<div className="name-badge-container">
+				<span className={"badge " + (type === "professional" ? "badge-orange" : "badge-blue")}>
+					{type.charAt(0).toUpperCase() + type.slice(1)}
+				</span>
+				<h3 className="text-primary text-left">{name} </h3>
+			</div>
 			<ul className="list">
 				{email ? (
 					<li>

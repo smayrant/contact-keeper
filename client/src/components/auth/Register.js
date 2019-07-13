@@ -18,8 +18,8 @@ const Register = props => {
 				setAlert(error, "danger");
 				clearErrors();
 			}
-			// eslint-disable-next-line
 		},
+		// eslint-disable-next-line
 		[ error, isAuthenticated, props.history ]
 	);
 
@@ -54,8 +54,8 @@ const Register = props => {
 	};
 
 	return (
-		<div className="form-container main-content container">
-			<div className="form-container">
+		<div className=" main-content container">
+			<div className="form-container register-form">
 				<h3>ContactKeeper</h3>
 				<h1>Get Started for Free!</h1>
 				<p>No commitment. No credit card required.</p>

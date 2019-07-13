@@ -4,6 +4,7 @@ import ContactForm from "../contacts/ContactForm";
 import ContactFilter from "../contacts/ContactFilter";
 import AuthContext from "../../context/auth/authContext";
 import Navbar from "../layout/Navbar";
+import Footer from "../layout/Footer";
 
 const Home = () => {
 	const authContext = useContext(AuthContext);
@@ -24,6 +25,7 @@ const Home = () => {
 					<Contacts />
 				</div>
 			</div>
+			<Footer />
 		</div>
 	);
 };

@@ -1,8 +1,9 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import community from "../../img/social-care.svg";
 import family from "../../img/family.svg";
 import network from "../../img/computer.svg";
+import Footer from "../layout/Footer";
 
 const Welcome = () => {
 	return (
@@ -70,6 +71,7 @@ const Welcome = () => {
 					</div>
 				</div>
 			</div>
+			<Footer />
 		</div>
 	);
 };

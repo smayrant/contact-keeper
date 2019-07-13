@@ -18,8 +18,8 @@ const Login = props => {
 				setAlert(error, "danger");
 				clearErrors();
 			}
-			// eslint-disable-next-line
 		},
+		// eslint-disable-next-line
 		[ error, isAuthenticated, props.history ]
 	);
 
@@ -47,10 +47,10 @@ const Login = props => {
 	};
 
 	return (
-		<div className="form-container main-content">
+		<div className="form-container  main-content">
 			<h2 className="title">ContactKeeper</h2>
 			<h1>Account Login</h1>
-			<form onSubmit={onSubmit}>
+			<form className="login-form" onSubmit={onSubmit}>
 				<div className="form-group">
 					<input type="email" name="email" value={email} onChange={onChange} />
 					<label htmlFor="name">Email Address</label>

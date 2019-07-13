@@ -75,6 +75,7 @@ li {
 .welcome-button:hover {
 	background-color: transparent;
 }
+
 .welcome-button:active {
 	position: relative;
 	top: 1px;
@@ -101,5 +102,11 @@ li {
 		margin-top: 2rem;
 		width: 15rem;
 		height: auto;
+	}
+}
+
+@media (max-width: 800px) {
+	.welcome-bg {
+		padding-bottom: 7rem;
 	}
 }

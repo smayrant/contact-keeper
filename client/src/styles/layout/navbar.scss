@@ -49,11 +49,25 @@
 }
 
 // home page navbar
-.home-navbar {
+.home-navbar-container {
 	background: url('./img/blue-background.jpg');
 	margin-bottom: 5rem;
 }
 
 .navbar-greeting {
 	color: #fff;
+}
+
+@media (max-width: 500px) {
+	.navbar {
+		flex-direction: column;
+	}
+
+	.home-navbar-headline {
+		margin: .5rem;
+	}
+
+	.home-navbar-links-container {
+		margin-bottom: .5rem;
+	}
 }
