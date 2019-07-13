@@ -32,7 +32,7 @@ const Welcome = () => {
 						<h1>The Contact Manager For You</h1>
 						<h3>Stop searching for the best contact manager, you just found it!</h3>
 						<Link to="/register">
-							<button className="button">Sign Me Up!</button>
+							<button className="welcome-button">Sign Me Up!</button>
 						</Link>
 					</div>
 				</div>
@@ -60,7 +60,7 @@ const Welcome = () => {
 			<div className="connected-outer-container">
 				<div className="container">
 					<div className="connected-inner-container">
-						<h1 className="headline">contacts at your fingertips</h1>
+						<h1 className="headline">stay connected</h1>
 						<p>
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim asperiores dolor vel voluptas
 							quisquam eaque deleniti. Nemo quo necessitatibus sit non? Suscipit ipsa, cumque similique

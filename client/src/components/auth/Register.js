@@ -54,29 +54,31 @@ const Register = props => {
 	};
 
 	return (
-		<div className="form-container main-content">
-			<h3>ContactKeeper</h3>
-			<h1>Get Started for Free!</h1>
-			<p>No commitment. No credit card required.</p>
-			<form onSubmit={onSubmit}>
-				<div className="form-group">
-					<input type="text" name="name" value={name} onChange={onChange} />
-					<label htmlFor="name">Name</label>
-				</div>
-				<div className="form-group">
-					<input type="email" name="email" value={email} onChange={onChange} />
-					<label htmlFor="email">Email Address</label>
-				</div>
-				<div className="form-group">
-					<input type="password" name="password" value={password} onChange={onChange} />
-					<label htmlFor="password">Password</label>
-				</div>
-				<div className="form-group">
-					<input type="password" name="password2" value={password2} onChange={onChange} />
-					<label htmlFor="password2">Confirm Password</label>
-				</div>
-				<input className="submit-button" type="submit" value="Register" />
-			</form>
+		<div className="form-container main-content container">
+			<div className="form-container">
+				<h3>ContactKeeper</h3>
+				<h1>Get Started for Free!</h1>
+				<p>No commitment. No credit card required.</p>
+				<form onSubmit={onSubmit}>
+					<div className="form-group">
+						<input type="text" name="name" value={name} onChange={onChange} />
+						<label htmlFor="name">Name</label>
+					</div>
+					<div className="form-group">
+						<input type="email" name="email" value={email} onChange={onChange} />
+						<label htmlFor="email">Email Address</label>
+					</div>
+					<div className="form-group">
+						<input type="password" name="password" value={password} onChange={onChange} />
+						<label htmlFor="password">Password</label>
+					</div>
+					<div className="form-group">
+						<input type="password" name="password2" value={password2} onChange={onChange} />
+						<label htmlFor="password2">Confirm Password</label>
+					</div>
+					<input className="submit-button" type="submit" value="Register" />
+				</form>
+			</div>
 		</div>
 	);
 };

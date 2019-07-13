@@ -1,6 +1,11 @@
-.card {
-	padding: 1rem;
-	border: #ccc 1px dotted;
-	margin: 0.7rem 0;
-	border: #ccc solid 1px;
+.contact-form {
+	line-height: 2rem;
+
+	h3 {
+		margin-bottom: 0;
+	}
+
+	input {
+		margin-bottom: 2rem;
+	}
 }

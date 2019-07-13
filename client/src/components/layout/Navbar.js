@@ -51,18 +51,14 @@ const Navbar = ({ title, icon }) => {
 		<div className="home-navbar">
 			<nav className="navbar container">
 				<div className="navbar-logo-container">
-					<h1>ContactKeeper</h1>
+					<h2>ContactKeeper</h2>
 				</div>
 				<div className="navbar-links-container">
-					<li className="navbar-link">
-						<Link className="" to="/register">
-							Register
-						</Link>
-					</li>
-					<li className="navbar-link">
-						<Link className="" to="/login">
-							Login
-						</Link>
+					<li className="navbar-greeting">Hello {user && user.name}</li>
+					<li>
+						<a onClick={onLogout} href="#!">
+							<i className="fas fa-sign-out-alt" /> <span className="hide-sm">Logout</span>
+						</a>
 					</li>
 				</div>
 			</nav>

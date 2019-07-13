@@ -14,19 +14,14 @@ const ContactItem = ({ contact }) => {
 
 	return (
 		<div className="card bg-light">
-			<h3 className="text-primary text-left">
-				{name} {" "}
-				<span
-					style={{ float: "right" }}
-					className={"badge " + (type === "professional" ? "badge-success" : "badge-primary")}
-				>
-					{type.charAt(0).toUpperCase() + type.slice(1)}
-				</span>
-			</h3>
+			<span className={"badge " + (type === "professional" ? "badge-orange" : "badge-blue")}>
+				{type.charAt(0).toUpperCase() + type.slice(1)}
+			</span>
+			<h3 className="text-primary text-left">{name}  </h3>
 			<ul className="list">
 				{email ? (
 					<li>
-						<i style={{ paddingRight: "8px" }} className="fas fa-envelope-open" />
+						<i className="contact-item-icon fas fa-envelope-open" />
 						{email}
 					</li>
 				) : (
@@ -34,21 +29,21 @@ const ContactItem = ({ contact }) => {
 				)}
 				{phone ? (
 					<li>
-						<i style={{ paddingRight: "8px" }} className="fas fa-phone" />
+						<i className="contact-item-icon fas fa-phone" />
 						{phone}
 					</li>
 				) : (
 					"No phone present"
 				)}
 			</ul>
-			<p>
+			<div>
 				<button className="home-button edit-button" onClick={() => setCurrent(contact)}>
 					Edit
 				</button>
 				<button className="home-button delete-button" onClick={onDelete}>
 					Delete
 				</button>
-			</p>
+			</div>
 		</div>
 	);
 };
