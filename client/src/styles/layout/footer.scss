@@ -13,3 +13,12 @@
 		margin: 0;
 	}
 }
+
+@media (max-width: 320px) {
+	.footer-container {
+		p {
+			font-size: .7rem;
+			margin: 0;
+		}
+	}
+}

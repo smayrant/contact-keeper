@@ -16,14 +16,10 @@ const Welcome = () => {
 						</div>
 						<div className="navbar-links-container">
 							<li className="navbar-link">
-								<Link className="" to="/register">
-									Register
-								</Link>
+								<Link to="/register">Register</Link>
 							</li>
 							<li className="navbar-link">
-								<Link className="" to="/login">
-									Login
-								</Link>
+								<Link to="/login">Login</Link>
 							</li>
 						</div>
 					</nav>
@@ -40,7 +36,7 @@ const Welcome = () => {
 			</div>
 			<div className="container">
 				<h1 className="headline">Keep track of your customers</h1>
-				<div className="img-text-container">
+				<div className="img-text-container top-img-text-container">
 					<p>
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum iure quam alias dolor quaerat
 						repellat, numquam ut sed tempore magni natus totam a laboriosam ex tenetur officia est maiores
@@ -49,7 +45,7 @@ const Welcome = () => {
 					<img src={community} alt="Hand holding individuals" />
 				</div>
 				<h1 className="headline">Keep in touch with family</h1>
-				<div className="img-text-container">
+				<div className="img-text-container bottom-img-text-container">
 					<img src={family} alt="family standing together" />
 					<p>
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum iure quam alias dolor quaerat
