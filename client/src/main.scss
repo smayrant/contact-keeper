@@ -11,16 +11,7 @@
 @import './styles/pages/register.scss';
 @import './styles/pages/home.scss';
 
-.route-container {
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
-}
-
-.main-content {
-	flex: 1;
-}
-
+// global styling
 body {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 1rem;
@@ -36,32 +27,35 @@ body {
 	padding: 0 2rem;
 }
 
+// styling for sticky footer
+.main-content {
+	min-height: 100vh;
+}
+
+.main-content::after {
+	content: '';
+	display: block;
+}
+
+.footer-container,
+.main-content::after {
+	height: 100px;
+}
+
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 * {
 	box-sizing: border-box;
 }
-/* Document
-   ========================================================================== */
-
-/**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in iOS.
- */
-
-html {
-	line-height: 1.15; /* 1 */
-	-webkit-text-size-adjust: 100%; /* 2 */
-}
-
-/* Sections
-   ========================================================================== */
 
 /**
  * Remove the margin in all browsers.
  */
 
-body {
+html,
+body,
+.route-container {
 	margin: 0;
+	height: 100%;
 }
 
 /**

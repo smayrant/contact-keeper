@@ -3,14 +3,14 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./components/pages/Home";
 import Welcome from "./components/pages/Welcome";
 import Error from "./components/pages/Error";
-import ContactState from "./context/contact/ContactState";
-import AuthState from "./context/auth/AuthState";
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
 import Alerts from "./components/layout/Alerts";
-import AlertState from "./context/alert/AlertState";
-import setAuthToken from "./utils/setAuthToken";
 import PrivateRoute from "./components/routing/PrivateRoute";
+import setAuthToken from "./utils/setAuthToken";
+import AlertState from "./context/alert/AlertState";
+import ContactState from "./context/contact/ContactState";
+import AuthState from "./context/auth/AuthState";
 import "./main.scss";
 
 // stores the token in the header if a token is present

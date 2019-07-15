@@ -21,6 +21,20 @@
 
 .navbar-link {
 	text-transform: uppercase;
+	a {
+		text-decoration: none;
+		transition: all ease-in-out .3s;
+	}
+
+	a:hover {
+		border-top: 4px solid #fff;
+		border-bottom: 4px solid #fff;
+		padding: 6px 0;
+	}
+}
+
+.home-link {
+	text-decoration: none;
 }
 
 .navbar-logo-container {
@@ -40,10 +54,6 @@
 	margin: 0 0.25rem;
 }
 
-.navbar a:hover {
-	color: var(--light-color);
-}
-
 .navbar .welcome span {
 	margin-right: 0.6rem;
 }
@@ -54,17 +64,22 @@
 	margin-bottom: 5rem;
 }
 
+.home-navbar-logo {
+	margin: 0;
+}
+
 .navbar-greeting {
 	color: #fff;
+}
+
+.logout-link {
+	text-decoration: none;
+	cursor: pointer;
 }
 
 @media (max-width: 500px) {
 	.navbar {
 		flex-direction: column;
-	}
-
-	.home-navbar-headline {
-		margin: .5rem;
 	}
 
 	.home-navbar-links-container {

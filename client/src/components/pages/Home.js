@@ -14,15 +14,17 @@ const Home = () => {
 		// eslint-disable-next-line
 	}, []);
 	return (
-		<div className="main-content">
-			<Navbar />
-			<div className=" grid-2 container">
-				<div className="contactForm-container">
-					<ContactForm />
-				</div>
-				<div>
-					<ContactFilter />
-					<Contacts />
+		<div>
+			<div className="main-content home-container">
+				<Navbar />
+				<div className=" grid-2 container">
+					<div className="contactForm-container">
+						<ContactForm />
+					</div>
+					<div>
+						<ContactFilter />
+						<Contacts />
+					</div>
 				</div>
 			</div>
 			<Footer />

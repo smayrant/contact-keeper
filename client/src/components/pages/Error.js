@@ -10,7 +10,7 @@ const Error = () => {
 		<div className="main-body">
 			<div className="container">
 				<div className="error-container">
-					<img src={mailman} alt="Man looking on a map" />
+					<img className="error-img" src={mailman} alt="Man looking on a map" />
 					<h1>Sorry, but this page isn't on the map :(</h1>
 					<h3>How about heading back home?</h3>
 					<Link className="home-link" to={authContext.token ? "/home" : "/"}>
