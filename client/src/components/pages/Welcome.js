@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import AuthContext from "../../context/auth/authContext";
+// import AuthContext from "../../context/auth/authContext";
 import community from "../../img/social-care.svg";
 import family from "../../img/family.svg";
 import network from "../../img/computer.svg";
