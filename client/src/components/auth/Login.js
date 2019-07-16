@@ -1,4 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
+import { Link } from "react-router-dom";
 import AuthContext from "../../context/auth/authContext";
 import AlertContext from "../../context/alert/alertContext";
 
@@ -61,6 +62,11 @@ const Login = props => {
 				</div>
 				<input type="submit" value="Login" className="submit-button login-button" />
 			</form>
+			<div>
+				<Link className="back-home-link" to="/">
+					Go Home
+				</Link>
+			</div>
 		</div>
 	);
 };
