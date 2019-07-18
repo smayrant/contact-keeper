@@ -1,6 +1,6 @@
 # ContactKeeper
 
-A full stack MERN application that allows users to register and login to an account to keep track of contacts. Utilizes React hooks, context and JSON Web Token authentication.
+A full stack MERN application that allows users to register and login to an account to keep track of contacts. Utilizes React hooks, context, bcrypt-nodejs for password encryption, express validator for login and registration validation and JSON Web Token authentication.
 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
