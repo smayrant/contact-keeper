@@ -5,8 +5,23 @@ const jwt = require("jsonwebtoken");
 const config = require("config");
 const auth = require("../middleware/auth");
 const { check, validationResult } = require("express-validator");
+const helmet = require("helmet");
 
 const User = require("../models/User");
+
+// utilizing helmet to secure the app by setting various HTTP headers, including the non-default CSP header which also allows resources from Font Awesome and Google Fonts
+router.use(
+	helmet.contentSecurityPolicy({
+		directives: {
+			defaultSrc: [ "'self'" ],
+			styleSrc: [
+				"'self'",
+				"https://use.fontawesome.com/releases/v5.6.3/css/all.css",
+				"https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Pacifico&display=swap"
+			]
+		}
+	})
+);
 
 // retrieve logged in user, passing in auth middleware
 router.get("/", auth, async (req, res) => {

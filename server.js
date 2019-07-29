@@ -5,12 +5,16 @@ const helmet = require("helmet");
 
 const app = express();
 
-// utilizing helmet to secure the app by setting various HTTP headers, including the non-default CSP header
+// utilizing helmet to secure the app by setting various HTTP headers, including the non-default CSP header which also allows resources from Font Awesome and Google Fonts
 app.use(
 	helmet.contentSecurityPolicy({
 		directives: {
 			defaultSrc: [ "'self'" ],
-			styleSrc: [ "'self'" ]
+			styleSrc: [
+				"'self'",
+				"https://use.fontawesome.com/releases/v5.6.3/css/all.css",
+				"https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Pacifico&display=swap"
+			]
 		}
 	})
 );
