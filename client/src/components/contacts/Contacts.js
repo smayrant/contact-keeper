@@ -1,5 +1,4 @@
 import React, { Fragment, useContext, useEffect } from "react";
-import Spinner from "../layout/Spinner";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import ContactItem from "./ContactItem";
 import ContactContext from "../../context/contact/contactContext";
@@ -37,7 +36,7 @@ const Contacts = () => {
 					)}
 				</TransitionGroup>
 			) : (
-				<Spinner />
+				<div>Loading contacts...</div>
 			)}
 		</Fragment>
 	);
