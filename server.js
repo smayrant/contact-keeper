@@ -15,7 +15,7 @@ app.use(
 				"https://use.fontawesome.com/releases/v5.6.3/css/all.css",
 				"https://fonts.googleapis.com"
 			],
-			fontSrc: [ "https://fonts.googleapis.com", "https://use.fontawesome.com" ]
+			fontSrc: [ "https://fonts.googleapis.com", "https://use.fontawesome.com", "https://fonts.gstatic.com" ]
 		}
 	})
 );
