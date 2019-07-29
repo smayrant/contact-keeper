@@ -14,11 +14,8 @@ router.use(
 	helmet.contentSecurityPolicy({
 		directives: {
 			defaultSrc: [ "'self'" ],
-			styleSrc: [
-				"'self'",
-				"https://use.fontawesome.com/releases/v5.6.3/css/all.css",
-				"https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Pacifico&display=swap"
-			]
+			styleSrc: [ "'self'", "https://use.fontawesome.com/releases/v5.6.3/css/all.css" ],
+			fontSrc: [ "https://fonts.googleapis.com" ]
 		}
 	})
 );
