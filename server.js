@@ -10,8 +10,12 @@ app.use(
 	helmet.contentSecurityPolicy({
 		directives: {
 			defaultSrc: [ "'self'" ],
-			styleSrc: [ "'self'", "https://use.fontawesome.com/releases/v5.6.3/css/all.css" ],
-			fontSrc: [ "https://fonts.googleapis.com" ]
+			styleSrc: [
+				"'self'",
+				"https://use.fontawesome.com/releases/v5.6.3/css/all.css",
+				"https://fonts.googleapis.com"
+			],
+			fontSrc: [ "https://fonts.googleapis.com", "https://use.fontawesome.com" ]
 		}
 	})
 );
