@@ -1,8 +1,19 @@
 const express = require("express");
 const connectDB = require("./config/db");
 const path = require("path");
+const helmet = require("helmet");
 
 const app = express();
+
+// utilizing helmet to secure the app by setting various HTTP headers, including the non-default CSP header
+app.use(
+	helmet.contentSecurityPolicy({
+		directives: {
+			defaultSrc: [ "'self'" ],
+			styleSrc: [ "'self'" ]
+		}
+	})
+);
 
 // Connect Database
 connectDB();
